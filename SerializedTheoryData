@@ -1,0 +1,403 @@
+using Xunit;
+
+namespace DashboardPluginTests.Utilities
+{
+    /// <summary>
+    /// Represents a set of data for a theory with a single parameter. Data can be added to the data set using the collection initializer syntax.
+    /// <para>Will wrap all data added in a <see cref="TheoryDatum{T}"/></para>
+    /// </summary>
+    /// <typeparam name="T">The parameter type.</typeparam>
+    public class SerializedTheoryData<T> : TheoryData<TheoryDatum<T>>
+    {
+        /// <summary>
+        /// Wraps data in a TheoryDatum and adds it to the theory data set.
+        /// </summary>
+        /// <param name="p">The data value.</param>
+        public void Add(T p)
+        {
+            base.Add(TheoryDatum.Create(p));
+        }
+    }
+
+    /// <summary>
+    /// Represents a set of data for a theory with a 2 parameters. Data can be added to the data set using the collection initializer syntax.
+    /// <para>Will wrap all data added in a <see cref="TheoryDatum{T}"/></para>
+    /// </summary>
+    /// <typeparam name="T1">The first parameter type.</typeparam>
+    /// <typeparam name="T2">The second parameter type.</typeparam>
+    public class SerializedTheoryData<T1, T2> :
+        TheoryData<
+            TheoryDatum<T1>,
+            TheoryDatum<T2>
+        >
+    {
+        /// <summary>
+        /// Wraps data in a TheoryDatum and adds it to the theory data set.
+        /// </summary>
+        /// <param name="p1">The first data value.</param>
+        /// <param name="p2">The second data value.</param>
+        public void Add(T1 p1, T2 p2)
+        {
+            base.Add(
+                TheoryDatum.Create(p1),
+                TheoryDatum.Create(p2)
+            );
+        }
+    }
+
+    /// <summary>
+    /// Represents a set of data for a theory with a 3 parameters. Data can be added to the data set using the collection initializer syntax.
+    /// <para>Will wrap all data added in a <see cref="TheoryDatum{T}"/></para>
+    /// </summary>
+    /// <typeparam name="T1">The first parameter type.</typeparam>
+    /// <typeparam name="T2">The second parameter type.</typeparam>
+    /// <typeparam name="T3">The third parameter type.</typeparam>
+    /// <typeparam name="T4">The fourth parameter type.</typeparam>
+    /// <typeparam name="T5">The fifth parameter type.</typeparam>
+    /// <typeparam name="T6">The sixth parameter type.</typeparam>
+    /// <typeparam name="T7">The seventh parameter type.</typeparam>
+    class SerializedTheoryData<T1, T2, T3> :
+        TheoryData<
+            TheoryDatum<T1>,
+            TheoryDatum<T2>,
+            TheoryDatum<T3>
+        >
+    {
+        /// <summary>
+        /// Wraps data in a TheoryDatum and adds it to the theory data set.
+        /// </summary>
+        /// <param name="p1">The first data value.</param>
+        /// <param name="p2">The second data value.</param>
+        /// <param name="p3">The third data value.</param>
+        public void Add(T1 p1, T2 p2, T3 p3)
+        {
+            base.Add(
+                TheoryDatum.Create(p1),
+                TheoryDatum.Create(p2),
+                TheoryDatum.Create(p3)
+            );
+        }
+    }
+
+    /// <summary>
+    /// Represents a set of data for a theory with a 4 parameters. Data can be added to the data set using the collection initializer syntax.
+    /// <para>Will wrap all data added in a <see cref="TheoryDatum{T}"/></para>
+    /// </summary>
+    /// <typeparam name="T1">The first parameter type.</typeparam>
+    /// <typeparam name="T2">The second parameter type.</typeparam>
+    /// <typeparam name="T3">The third parameter type.</typeparam>
+    /// <typeparam name="T4">The fourth parameter type.</typeparam>
+    class SerializedTheoryData<T1, T2, T3, T4> :
+        TheoryData<
+            TheoryDatum<T1>,
+            TheoryDatum<T2>,
+            TheoryDatum<T3>,
+            TheoryDatum<T4>
+        >
+    {
+        /// <summary>
+        /// Wraps data in a TheoryDatum and adds it to the theory data set.
+        /// </summary>
+        /// <param name="p1">The first data value.</param>
+        /// <param name="p2">The second data value.</param>
+        /// <param name="p3">The third data value.</param>
+        /// <param name="p4">The fourth data value.</param>
+        public void Add(T1 p1, T2 p2, T3 p3, T4 p4)
+        {
+            base.Add(
+                TheoryDatum.Create(p1),
+                TheoryDatum.Create(p2),
+                TheoryDatum.Create(p3),
+                TheoryDatum.Create(p4)
+            );
+        }
+    }
+
+    /// <summary>
+    /// Represents a set of data for a theory with a 5 parameters. Data can be added to the data set using the collection initializer syntax.
+    /// <para>Will wrap all data added in a <see cref="TheoryDatum{T}"/></para>
+    /// </summary>
+    /// <typeparam name="T1">The first parameter type.</typeparam>
+    /// <typeparam name="T2">The second parameter type.</typeparam>
+    /// <typeparam name="T3">The third parameter type.</typeparam>
+    /// <typeparam name="T4">The fourth parameter type.</typeparam>
+    /// <typeparam name="T5">The fifth parameter type.</typeparam>
+    class SerializedTheoryData<T1, T2, T3, T4, T5> :
+        TheoryData<
+            TheoryDatum<T1>,
+            TheoryDatum<T2>,
+            TheoryDatum<T3>,
+            TheoryDatum<T4>,
+            TheoryDatum<T5>
+        >
+    {
+        /// <summary>
+        /// Wraps data in a TheoryDatum and adds it to the theory data set.
+        /// </summary>
+        /// <param name="p1">The first data value.</param>
+        /// <param name="p2">The second data value.</param>
+        /// <param name="p3">The third data value.</param>
+        /// <param name="p4">The fourth data value.</param>
+        /// <param name="p5">The fifth data value.</param>
+        public void Add(T1 p1, T2 p2, T3 p3, T4 p4, T5 p5)
+        {
+            base.Add(
+                TheoryDatum.Create(p1),
+                TheoryDatum.Create(p2),
+                TheoryDatum.Create(p3),
+                TheoryDatum.Create(p4),
+                TheoryDatum.Create(p5)
+            );
+        }
+    }
+
+    /// <summary>
+    /// Represents a set of data for a theory with a 6 parameters. Data can be added to the data set using the collection initializer syntax.
+    /// <para>Will wrap all data added in a <see cref="TheoryDatum{T}"/></para>
+    /// </summary>
+    /// <typeparam name="T1">The first parameter type.</typeparam>
+    /// <typeparam name="T2">The second parameter type.</typeparam>
+    /// <typeparam name="T3">The third parameter type.</typeparam>
+    /// <typeparam name="T4">The fourth parameter type.</typeparam>
+    /// <typeparam name="T5">The fifth parameter type.</typeparam>
+    /// <typeparam name="T6">The sixth parameter type.</typeparam>
+    class SerializedTheoryData<T1, T2, T3, T4, T5, T6> :
+        TheoryData<
+            TheoryDatum<T1>,
+            TheoryDatum<T2>,
+            TheoryDatum<T3>,
+            TheoryDatum<T4>,
+            TheoryDatum<T5>,
+            TheoryDatum<T6>
+        >
+    {
+        /// <summary>
+        /// Wraps data in a TheoryDatum and adds it to the theory data set.
+        /// </summary>
+        /// <param name="p1">The first data value.</param>
+        /// <param name="p2">The second data value.</param>
+        /// <param name="p3">The third data value.</param>
+        /// <param name="p4">The fourth data value.</param>
+        /// <param name="p5">The fifth data value.</param>
+        /// <param name="p6">The sixth data value.</param>
+        public void Add(T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6)
+        {
+            base.Add(
+                TheoryDatum.Create(p1),
+                TheoryDatum.Create(p2),
+                TheoryDatum.Create(p3),
+                TheoryDatum.Create(p4),
+                TheoryDatum.Create(p5),
+                TheoryDatum.Create(p6)
+            );
+        }
+    }
+
+    /// <summary>
+    /// Represents a set of data for a theory with a 7 parameters. Data can be added to the data set using the collection initializer syntax.
+    /// <para>Will wrap all data added in a <see cref="TheoryDatum{T}"/></para>
+    /// </summary>
+    /// <typeparam name="T1">The first parameter type.</typeparam>
+    /// <typeparam name="T2">The second parameter type.</typeparam>
+    /// <typeparam name="T3">The third parameter type.</typeparam>
+    /// <typeparam name="T4">The fourth parameter type.</typeparam>
+    /// <typeparam name="T5">The fifth parameter type.</typeparam>
+    /// <typeparam name="T6">The sixth parameter type.</typeparam>
+    /// <typeparam name="T7">The seventh parameter type.</typeparam>
+    class SerializedTheoryData<T1, T2, T3, T4, T5, T6, T7> :
+        TheoryData<
+            TheoryDatum<T1>,
+            TheoryDatum<T2>,
+            TheoryDatum<T3>,
+            TheoryDatum<T4>,
+            TheoryDatum<T5>,
+            TheoryDatum<T6>,
+            TheoryDatum<T7>
+        >
+    {
+        /// <summary>
+        /// Wraps data in a TheoryDatum and adds it to the theory data set.
+        /// </summary>
+        /// <param name="p1">The first data value.</param>
+        /// <param name="p2">The second data value.</param>
+        /// <param name="p3">The third data value.</param>
+        /// <param name="p4">The fourth data value.</param>
+        /// <param name="p5">The fifth data value.</param>
+        /// <param name="p6">The sixth data value.</param>
+        /// <param name="p7">The seventh data value.</param>
+        public void Add(T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6, T7 p7)
+        {
+            base.Add(
+                TheoryDatum.Create(p1),
+                TheoryDatum.Create(p2),
+                TheoryDatum.Create(p3),
+                TheoryDatum.Create(p4),
+                TheoryDatum.Create(p5),
+                TheoryDatum.Create(p6),
+                TheoryDatum.Create(p7)
+            );
+        }
+    }
+
+    /// <summary>
+    /// Represents a set of data for a theory with a 8 parameters. Data can be added to the data set using the collection initializer syntax.
+    /// <para>Will wrap all data added in a <see cref="TheoryDatum{T}"/></para>
+    /// </summary>
+    /// <typeparam name="T1">The first parameter type.</typeparam>
+    /// <typeparam name="T2">The second parameter type.</typeparam>
+    /// <typeparam name="T3">The third parameter type.</typeparam>
+    /// <typeparam name="T4">The fourth parameter type.</typeparam>
+    /// <typeparam name="T5">The fifth parameter type.</typeparam>
+    /// <typeparam name="T6">The sixth parameter type.</typeparam>
+    /// <typeparam name="T7">The seventh parameter type.</typeparam>
+    /// <typeparam name="T8">The eighth parameter type.</typeparam>
+    class SerializedTheoryData<T1, T2, T3, T4, T5, T6, T7, T8> :
+        TheoryData<
+            TheoryDatum<T1>,
+            TheoryDatum<T2>,
+            TheoryDatum<T3>,
+            TheoryDatum<T4>,
+            TheoryDatum<T5>,
+            TheoryDatum<T6>,
+            TheoryDatum<T7>,
+            TheoryDatum<T8>
+        >
+    {
+        /// <summary>
+        /// Wraps data in a TheoryDatum and adds it to the theory data set.
+        /// </summary>
+        /// <param name="p1">The first data value.</param>
+        /// <param name="p2">The second data value.</param>
+        /// <param name="p3">The third data value.</param>
+        /// <param name="p4">The fourth data value.</param>
+        /// <param name="p5">The fifth data value.</param>
+        /// <param name="p6">The sixth data value.</param>
+        /// <param name="p7">The seventh data value.</param>
+        /// <param name="p8">The eighth data value.</param>
+        public void Add(T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6, T7 p7, T8 p8)
+        {
+            base.Add(
+                TheoryDatum.Create(p1),
+                TheoryDatum.Create(p2),
+                TheoryDatum.Create(p3),
+                TheoryDatum.Create(p4),
+                TheoryDatum.Create(p5),
+                TheoryDatum.Create(p6),
+                TheoryDatum.Create(p7),
+                TheoryDatum.Create(p8)
+            );
+        }
+    }
+
+    /// <summary>
+    /// Represents a set of data for a theory with a 9 parameters. Data can be added to the data set using the collection initializer syntax.
+    /// <para>Will wrap all data added in a <see cref="TheoryDatum{T}"/></para>
+    /// </summary>
+    /// <typeparam name="T1">The first parameter type.</typeparam>
+    /// <typeparam name="T2">The second parameter type.</typeparam>
+    /// <typeparam name="T3">The third parameter type.</typeparam>
+    /// <typeparam name="T4">The fourth parameter type.</typeparam>
+    /// <typeparam name="T5">The fifth parameter type.</typeparam>
+    /// <typeparam name="T6">The sixth parameter type.</typeparam>
+    /// <typeparam name="T7">The seventh parameter type.</typeparam>
+    /// <typeparam name="T8">The eighth parameter type.</typeparam>
+    /// <typeparam name="T9">The ninth parameter type.</typeparam>
+    class SerializedTheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9> :
+        TheoryData<
+            TheoryDatum<T1>,
+            TheoryDatum<T2>,
+            TheoryDatum<T3>,
+            TheoryDatum<T4>,
+            TheoryDatum<T5>,
+            TheoryDatum<T6>,
+            TheoryDatum<T7>,
+            TheoryDatum<T8>,
+            TheoryDatum<T9>
+        >
+    {
+        /// <summary>
+        /// Wraps data in a TheoryDatum and adds it to the theory data set.
+        /// </summary>
+        /// <param name="p1">The first data value.</param>
+        /// <param name="p2">The second data value.</param>
+        /// <param name="p3">The third data value.</param>
+        /// <param name="p4">The fourth data value.</param>
+        /// <param name="p5">The fifth data value.</param>
+        /// <param name="p6">The sixth data value.</param>
+        /// <param name="p7">The seventh data value.</param>
+        /// <param name="p8">The eighth data value.</param>
+        /// <param name="p9">The ninth data value.</param>
+        public void Add(T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6, T7 p7, T8 p8, T9 p9)
+        {
+            base.Add(
+                TheoryDatum.Create(p1),
+                TheoryDatum.Create(p2),
+                TheoryDatum.Create(p3),
+                TheoryDatum.Create(p4),
+                TheoryDatum.Create(p5),
+                TheoryDatum.Create(p6),
+                TheoryDatum.Create(p7),
+                TheoryDatum.Create(p8),
+                TheoryDatum.Create(p9)
+            );
+        }
+    }
+
+    /// <summary>
+    /// Represents a set of data for a theory with a 10 parameters. Data can be added to the data set using the collection initializer syntax.
+    /// <para>Will wrap all data added in a <see cref="TheoryDatum{T}"/></para>
+    /// </summary>
+    /// <typeparam name="T1">The first parameter type.</typeparam>
+    /// <typeparam name="T2">The second parameter type.</typeparam>
+    /// <typeparam name="T3">The third parameter type.</typeparam>
+    /// <typeparam name="T4">The fourth parameter type.</typeparam>
+    /// <typeparam name="T5">The fifth parameter type.</typeparam>
+    /// <typeparam name="T6">The sixth parameter type.</typeparam>
+    /// <typeparam name="T7">The seventh parameter type.</typeparam>
+    /// <typeparam name="T8">The eighth parameter type.</typeparam>
+    /// <typeparam name="T9">The ninth parameter type.</typeparam>
+    /// <typeparam name="T10">The tenth parameter type.</typeparam>
+    class SerializedTheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> :
+        TheoryData<
+            TheoryDatum<T1>,
+            TheoryDatum<T2>,
+            TheoryDatum<T3>,
+            TheoryDatum<T4>,
+            TheoryDatum<T5>,
+            TheoryDatum<T6>,
+            TheoryDatum<T7>,
+            TheoryDatum<T8>,
+            TheoryDatum<T9>,
+            TheoryDatum<T10>
+        >
+    {
+        /// <summary>
+        /// Wraps data in a TheoryDatum and adds it to the theory data set.
+        /// </summary>
+        /// <param name="p1">The first data value.</param>
+        /// <param name="p2">The second data value.</param>
+        /// <param name="p3">The third data value.</param>
+        /// <param name="p4">The fourth data value.</param>
+        /// <param name="p5">The fifth data value.</param>
+        /// <param name="p6">The sixth data value.</param>
+        /// <param name="p7">The seventh data value.</param>
+        /// <param name="p8">The eighth data value.</param>
+        /// <param name="p9">The ninth data value.</param>
+        /// <param name="p10">The tenth data value.</param>
+        public void Add(T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6, T7 p7, T8 p8, T9 p9, T10 p10)
+        {
+            base.Add(
+                TheoryDatum.Create(p1),
+                TheoryDatum.Create(p2),
+                TheoryDatum.Create(p3),
+                TheoryDatum.Create(p4),
+                TheoryDatum.Create(p5),
+                TheoryDatum.Create(p6),
+                TheoryDatum.Create(p7),
+                TheoryDatum.Create(p8),
+                TheoryDatum.Create(p9),
+                TheoryDatum.Create(p10)
+            );
+        }
+    }
+}
