@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace DashboardPluginTests.Utilities
+namespace Xunit.Utilities
 {
     /// <summary>
     /// Represents a set of data for a theory with a single parameter. Data can be added to the data set using the collection initializer syntax.
